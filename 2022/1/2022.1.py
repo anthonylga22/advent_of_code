@@ -10,7 +10,13 @@ for x in f:
         elf_calories = 0
 total_calories.append(elf_calories)
 
-print(max(total_calories))
+print(f"The elf carrying the most calories is carrying {max(total_calories)} calories!")
+
+sorted_calories = sorted(total_calories, reverse=True)
+top3_elves = 0
+for i in range(3):
+    top3_elves += sorted_calories[i]
+print(f"The top 3 elves produced {top3_elves} calories!")
 
 
 
