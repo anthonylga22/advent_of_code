@@ -19,6 +19,23 @@ for i in range(3):
 print(f"The top 3 elves produced {top3_elves} calories!")
 
 
+#Best solution (https://www.reddit.com/r/adventofcode/comments/z9ezjb/2022_day_1_solutions/)
+with open('2022/1/input.txt','r') as f:
+    f = f.readlines()
+    
+calories = []
+sum_ = 0
+
+for i in f:
+    if i != '\n':
+        sum_ += int(i)
+    else:
+        calories.append(sum_)
+        sum_ = 0
+calories.sort(reverse=True)
+print(calories[0])
+print(sum(calories[:3]))
+
 
 
 
